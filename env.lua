@@ -2,7 +2,7 @@ local function serializeTable(val, name, skipnewlines, depth) -- thx 4 free code
     skipnewlines = skipnewlines or false
     depth = depth or 0
 
-    local tmp = string.rep(" ", depth)
+    local tmp = string.rep("\t", depth)
 
     if name then tmp = tmp .. name .. " = " end
 
