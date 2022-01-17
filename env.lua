@@ -13,7 +13,7 @@ local function serializeTable(val, name, skipnewlines, depth) -- thx 4 free code
             tmp =  tmp .. serializeTable(v, k, skipnewlines, depth + 1) .. "," .. (not skipnewlines and "\n" or "")
         end
 
-        tmp = tmp .. string.rep(" ", depth) .. "}"
+        tmp = tmp .. string.rep("\t", depth) .. "}"
     elseif type(val) == "number" then
         tmp = tmp .. tostring(val)
     elseif type(val) == "string" then
