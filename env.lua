@@ -21,7 +21,7 @@ local function serializeTable(val, name, skipnewlines, depth) -- thx 4 free code
     elseif type(val) == "boolean" then
         tmp = tmp .. (val and "true" or "false")
     else
-        tmp = tmp .. "" .. type(val) .. ""
+        tmp = tmp .. type(val)
     end
 
     return tmp
